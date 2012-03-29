@@ -1,0 +1,3 @@
+In this project we present you a problem we got during our migration from Glassfish v2 to v3. The project contains two entities (A and B) and a test class. The test class contains four test methods and the method testSelectIdsWithoutReference() fails. A similar behaviour worked with Glassfish v2 and now we are confused if there is a bug in EclipseLink and Glassfish or do we use it wrong?
+
+The project is mavenized and the maven target "test" shows the failing test.
