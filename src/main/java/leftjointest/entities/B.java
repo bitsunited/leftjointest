@@ -10,7 +10,7 @@ public class B {
   @Id
   private long id;
   
-  @ManyToOne
+  @ManyToOne(optional = true)
   private A a;
   
   @Deprecated
