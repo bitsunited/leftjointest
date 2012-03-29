@@ -2,7 +2,7 @@ package leftjointest.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class B {
@@ -10,7 +10,7 @@ public class B {
   @Id
   private long id;
   
-  @ManyToOne(optional = true)
+  @OneToOne(optional = true)
   private A a;
   
   @Deprecated
