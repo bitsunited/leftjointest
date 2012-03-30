@@ -3,11 +3,13 @@
 <!-- Copyright © 2008 Razorcat Development GmbH, http://www.razorcat.com -->
 <persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
-	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
 
 	<persistence-unit name="leftjointest"
 		transaction-type="RESOURCE_LOCAL">
 		<description>Test Project Database for local testing</description>
+
+		<provider>oracle.toplink.essentials.PersistenceProvider</provider>
 
 		<!-- entities -->
 		<class>leftjointest.entities.A</class>
@@ -16,12 +18,14 @@
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:leftjointest;create=true" />
-			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
-
-			<property name="eclipselink.ddl-generation" value="create-tables" />
-			<property name="eclipselink.ddl-generation.output-mode"
-				value="database" />
+			<property name="toplink.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+			<property name="toplink.jdbc.url" value="jdbc:derby:memory:leftjointest;create=true" />
+			<property name="toplink.ddl-generation" value="create-tables" />
+			<property name="toplink.ddl-generation.output-mode" value="database" />
 		</properties>
+		<!-- <properties> <property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:leftjointest;create=true" 
+			/> <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" 
+			/> <property name="eclipselink.ddl-generation" value="create-tables" /> <property 
+			name="eclipselink.ddl-generation.output-mode" value="database" /> </properties> -->
 	</persistence-unit>
 </persistence>

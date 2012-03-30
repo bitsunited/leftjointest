@@ -11,10 +11,8 @@
 	</properties>
 
 	<repositories>
-		<repository>
-			<id>Eclipselink Repository</id>
-			<url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
-		</repository>
+		<!-- <repository> <id>Eclipselink Repository</id> <url>http://download.eclipse.org/rt/eclipselink/maven.repo</url> 
+			</repository> -->
 	</repositories>
 
 	<dependencies>
@@ -33,14 +31,14 @@
 			<version>10.7.1.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>eclipselink</artifactId>
-			<version>2.3.2</version>
+			<groupId>toplink.essentials</groupId>
+			<artifactId>toplink-essentials</artifactId>
+			<version>2.1-60e</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>javax.persistence</artifactId>
-			<version>2.0.0</version>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0.2</version>
 		</dependency>
 	</dependencies>
 </project>

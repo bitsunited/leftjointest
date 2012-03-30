@@ -5,11 +5,11 @@ import static org.junit.Assert.assertNull;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 import leftjointest.entities.A;
 import leftjointest.entities.B;
 
-import org.eclipse.persistence.jpa.PersistenceProvider;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -26,8 +26,7 @@ public class LeftJoinTest {
   @BeforeClass
   public static void setupClass() {
     // create entity manager factory for derby in memory database
-    PersistenceProvider p = new PersistenceProvider();
-    factory = p.createEntityManagerFactory("leftjointest", null);
+    factory = Persistence.createEntityManagerFactory("leftjointest");
   }
 
   @Before
